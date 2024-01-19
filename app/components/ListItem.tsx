@@ -3,9 +3,9 @@ type Props = {
   description: string
 }
 
-const ListItem: React.FC<Props> = ({ title, description }) => {
+const ListItem: React.FC<Props> = ({ title, description }: Props) => {
   return (
-    <div>
+    <div aria-label='list-item'>
       Title: {title}
       <p>
         Description: {description}
