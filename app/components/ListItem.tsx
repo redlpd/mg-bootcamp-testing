@@ -6,8 +6,10 @@ type Props = {
 const ListItem: React.FC<Props> = ({ title, description }) => {
   return (
     <div>
-      Title: {title}
-      <p>
+      <p aria-label='title'>
+        Title: {title}
+      </p>
+      <p aria-label='description'>
         Description: {description}
       </p>
     </div>
