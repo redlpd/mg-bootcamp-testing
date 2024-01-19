@@ -1,3 +1,4 @@
+import React from "react"
 import ListItem from "./ListItem"
 
 type Props = {
@@ -8,7 +9,7 @@ type Props = {
   }[]
 }
 
-const List: React.FC<Props> = ({ items }) => {
+const List: React.FC<Props> = ({ items }: Props) => {
   return (
     <ul>
       {items.map(({ title, description, id }) => (
