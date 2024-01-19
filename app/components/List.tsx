@@ -12,7 +12,7 @@ const List: React.FC<Props> = ({ items }) => {
   return (
     <ul>
       {items.map(({ title, description, id }) => (
-        <li key={id} aria-label='list-item'>
+        <li key={id}>
           <ListItem title={title} description={description} />
         </li>
       ))}

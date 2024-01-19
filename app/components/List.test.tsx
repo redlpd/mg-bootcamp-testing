@@ -1,7 +1,7 @@
 import List from './List'
 import { render, screen } from '@testing-library/react'
 
-it('should render the List component with 2 items', () => {
+beforeEach(() => {
   const items = [
     {
       id: 1,
@@ -16,6 +16,15 @@ it('should render the List component with 2 items', () => {
   ]
 
   render(<List items={items} />)
-  expect(screen.getAllByLabelText('list-item')).toHaveLength(2)
-  expect(screen.getAllByLabelText('list-item')[0]).toHaveTextContent('Title 1')
+})
+
+describe('<List />', () => {
+  it('will check the list items length', () => {
+    expect(screen.getAllByRole('listitem')).toHaveLength(2)
+  })
+  
+  it('will should render all the items', () => {
+    expect(screen.getAllByRole('listitem')[0]).toHaveTextContent('Title 1')
+    expect(screen.getAllByRole('listitem')[1]).toHaveTextContent('Title 2')
+  })
 })
