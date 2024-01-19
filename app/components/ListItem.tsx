@@ -5,9 +5,9 @@ type Props = {
 
 const ListItem: React.FC<Props> = ({ title, description }) => {
   return (
-    <div>
+    <div data-testid="title">
       Title: {title}
-      <p>
+      <p data-testid="description">
         Description: {description}
       </p>
     </div>
